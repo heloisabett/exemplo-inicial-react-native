@@ -1,28 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
-import Header from "./src/components/Header";
-
+import { StyleSheet, View } from 'react-native';
+import Header from './src/components/Header';
+import ListaEstado from './src/components/ListaEstados';
 export default function App() {
-  const tasks = ["task 1", "task 2", "task 3", "task 4", "task 5"];
   return (
     <View style={styles.container}>
-      <Header titulo="lista de alunos" />
-      <Header titulo="lista de professores" />
-      <Header titulo="lista de desatentos" />
-      {/* <listaestado/> */}
-      {tasks.map((task) => (
-        <Text>{task}</Text>
-      ))}
-  
+      <Header titulo="Lista de alunos" />
+      <Header titulo="Lista de professores" />
+      <Header titulo="Lista de desatentos" />
+      <ListaEstado />
     </View>
-    
   );
-  }
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
